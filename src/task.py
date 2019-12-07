@@ -34,7 +34,8 @@ class Task:
         for (data, expected) in test_data:
             data = list(map(self.parse_line, data))
             actual = self.solve(data)
-            assert(actual == expected)
+            assert(actual == expected), "Actual: {} != Expected: {}".format(
+                actual, expected)
 
     def solve(self, data):
         pass
